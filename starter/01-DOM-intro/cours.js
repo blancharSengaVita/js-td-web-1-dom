@@ -9,13 +9,27 @@ SOURCE :
 // A. Premiers pas avec le DOM en JavaScript
 
 // 1. Accéder au DOM avec la variable document
-/* 
+/*
 EXERCICE 1 : Afficher dans la console
-- l'objet head du DOM (représentant l'élément <head>) 
-- l'objet body du DOM (représentant l'élément <body>) 
+- l'objet head du DOM (représentant l'élément <head>)
+- l'objet body du DOM (représentant l'élément <body>)
 - le titre du document
 */
 
+const head = document.head;
+console.log(head);
+const body = document.body.nodeType;
+console.log(typeof body);
+
+const node = document.body.childNodes //on met un objet de type element dans node qu'on a initialise
+console.log(node);
+
+
+for (let 1=0; i<node.length; i++){
+  if (node[i].nodeType === Node.ELEMENT_NODE) {
+  console.log(`L'élement ${i} egale ${node[i]}`)
+ }
+}
 
 
 
@@ -27,8 +41,8 @@ La valeur de cette propriété est document.ELEMENT_NODE (une constante qui vaut
 et document.TEXT_NODE (une constante qui vaut 3) pour un nœud textuel.
 Voir documentation sur le MDN : https://developer.mozilla.org/fr/docs/Web/API/Node/nodeType
 */
-/* 
-EXERCICE 2 : 
+/*
+EXERCICE 2 :
 Tester si le nœud body est de type document.ELEMENT_NODE
 - si oui, afficher "body est un noeud élément" ;
 - sinon, afficher "body est un noeud textuel".
@@ -48,8 +62,8 @@ Chaque objet du DOM de type élément possède une propriétéchildNodes.
 Il s'agit d'une collection ordonnée regroupant tous ses nœuds enfants sous la forme d'objets DOM.
 On peut utiliser cette collection un peu comme un tableau pour accéder aux différents enfants d'un nœud.
 */
-/* 
-EXERCICE 3 : 
+/*
+EXERCICE 3 :
 Accéder aux enfants d'un nœud. Afficher :
 - le 1er enfant du noeud body ;
 - le 2e enfant du noeud body ;
@@ -71,15 +85,15 @@ Accéder aux enfants d'un nœud. Afficher :
 Chaque objet du DOM possède une propriété parentNode
 qui renvoie son nœud parent sous la forme d'un objet DOM.
 */
-/* 
-EXERCICE 4 : 
-Accéder au parent d'un nœud. Afficher 
+/*
+EXERCICE 4 :
+Accéder au parent d'un nœud. Afficher
 - le parent du noeud h1 ;
 - le parent du noeud document ;
 */
 
 // Affiche le parent du noeud h1
-
-
-
+const nodes = document.body.childNodes[1];
+console.log(`ceci est h1 ${nodes}`)
+console.log(`ceci est le parent du h1 ${nodes.parentNode}`)
 // Accès au parent du noeud document ?

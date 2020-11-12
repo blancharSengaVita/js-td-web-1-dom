@@ -34,8 +34,12 @@ en utilisant la méthode getElementsByTagName()
 l'ensemble des éléments du document ayant pour classe "merveilles"
 */
 
+const myLis  = document.getElementsByClassName("merveilles")
+console.log();
 
-
+for (let i=0; i < myLis.Length; i++){
+  console.log(myLis[i]);
+}
 
 // 4. Sélection d'un élément selon son identifiant
 /* EXERCICE 4 :
@@ -47,7 +51,7 @@ l'ensemble des éléments du document ayant pour classe "merveilles"
 // 5. Chaînage de méthodes
 /* EXERCICE 5 :
 - Sélectionner et afficher, en enchaînant les méthodes getElementById() et getElementsByClassName(),
-	le nombre d'enfants de l'élément d'id "antiques" ayant la classe "existe" 
+	le nombre d'enfants de l'élément d'id "antiques" ayant la classe "existe"
 - Afficher l'enfant en question
 */
 // Affiche le nombre d'enfants de l'élément d'identifiant "antiques" ayant la classe "existe"
@@ -78,14 +82,15 @@ Elle renvoie la liste des éléments correspondant au sélecteur passé en param
 
 // Nombre de paragraphes
 
-
+console.log(document.querySelectorAll("p").length)
 // Le premier paragraphe
-
+console.log(document.querySelectorAll("p")[0])
 
 // Nombre de paragraphes à l'intérieur de l'élément d'id "contenu"
-
+console.log(document.querySelectorAll("#content p").length) //le length sert à compter
 
 // Le 2e paragraphe à l'intérieur de l'élément d'id "contenu"
+console.log(document.querySelector("#content p:nth-child(2)"))
 
 
 // Nombre d'éléments ayant la classe "existe"
@@ -120,7 +125,7 @@ La méthode querySelector() fonctionne comme querySelectorAll(), mais elle renvo
 
 // 1. Le contenu HTML
 /*
-La propriété innerHTML permet de récupérer tout le contenu HTML d'un élément du DOM. 
+La propriété innerHTML permet de récupérer tout le contenu HTML d'un élément du DOM.
 */
 /* EXERCICE 7 : Afficher dans la console
 - Le contenu HTML de l'élément identifié par "contenu"
@@ -136,11 +141,11 @@ La propriété innerHTML permet de récupérer tout le contenu HTML d'un éléme
 
 // 2. Le contenu textuel
 /*
-La propriété textContent renvoie tout le contenu textuel d'un élément du DOM, sans le balisage HTML.﻿﻿ 
+La propriété textContent renvoie tout le contenu textuel d'un élément du DOM, sans le balisage HTML.﻿﻿
 */
 /* EXERCICE 8 : Afficher dans la console
 - Le contenu textuel de l'élément identifié par "contenu"
-- Le libellé du lien qui pointe vers https://fr.wikipedia.org/wiki/Sept_merveilles_du_monde 
+- Le libellé du lien qui pointe vers https://fr.wikipedia.org/wiki/Sept_merveilles_du_monde
 */
 
 // Le contenu textuel de l'élément identifié par "contenu"
@@ -160,20 +165,26 @@ La propriété textContent renvoie tout le contenu textuel d'un élément du DOM
 - L'attribut href du premier lien avec la méthode getAttribute()
 - L'identifiant de la première liste (avec l'autre méthode)
 - L'attribut href du premier lien (avec l'autre méthode)
-- Vérifier, grâce à la méthode hasAttribute(), la présence de l'attribut target sur le premier lien du document 
+- Vérifier, grâce à la méthode hasAttribute(), la présence de l'attribut target sur le premier lien du document
 */
 // Affiche l'attribut href du premier lien
-
+console.log (document.querySelector('a').href)
 
 // Affiche l'identifiant de la première liste
-
+console.log (document.querySelector('a').id)
 
 // Affiche l'attribut href du premier lien
-
+console.log (document.querySelector('a').href)
 
 // Vérifie la présence de l'attribut target sur le premier lien
-
-
+console.log (document.querySelector('a').href(''))
+const (document.querySelector("a").getAttribute("target").getAttribute(target))
+if (hasTarget === null) {
+  console.log("il n'y'a pas l'attribut target");
+  else {
+    console.log("il y'a l'attribut target");
+  }
+}
 
 // 4. Les classes
 /*
@@ -190,13 +201,15 @@ La propriété textContent renvoie tout le contenu textuel d'un élément du DOM
 */
 
 // Liste des classes de l'élément identifié par "antiques"
-
-
+const myClasses = document.getElementById("antiques").className;
+console.log(document.getElementById("antiques").classList);
 // Affiche le nombre de classes que possède l'élément d'id "antiques"
-
+const myLength = document.getElementById("antiques").className.length;
+for (let i=0; i < myLength.lenght, i++) {
+  console.log(myClasses[i]);
+}
 
 // Affiche la première classe que possède l'élément d'id "antiques"
-
+document.querySelector("#antiques").classList.contains("merveilles");
 
 // Teste si l'élément d'id "antiques" possède la classe "merveille"
-

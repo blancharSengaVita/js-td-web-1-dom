@@ -16,7 +16,7 @@ La propriété innerHTML
 !! N.B. Limiter son usage (déconseillé pour plusieurs raisons), on verra des méthodes plus adaptées
 */
 /*
-EXERCICE 1 : 
+EXERCICE 1 :
 1. Enregistrer l'ul d'id "langages" dans la variable ulElt et l'afficher
 2. Ajouter un nouveau langage (C) à cette liste et la réafficher
 	(Aide : on lui ajoute (opérateur+=) une entrée sous la forme d'une balise <li>)
@@ -28,11 +28,11 @@ EXERCICE 1 :
 
 
 // 2. Le contenu textuel
-/* 
+/*
 La propriété textContent permet de modifier le contenu textuel d'un élément du DOM.
 */
 /*
-EXERCICE 2 : 
+EXERCICE 2 :
 Compléter le titre du document pour qu'il devienne
 "Quelques langages de programmation" et le réafficher
 */
@@ -41,13 +41,13 @@ Compléter le titre du document pour qu'il devienne
 
 
 // 3. Les attributs
-/* 
+/*
 - La méthode setAttribute() permet de définir la valeur de l'un des attributs d'un élément.
   Elle prend en paramètres le nom et la valeur de cet attribut.
 - On peut aussi modifier les attributs via la propriété qui les réprésente
 */
 /*
-EXERCICE 3 : 
+EXERCICE 3 :
 1. Stocker le premier titre du document dans une variable titreElt et l'afficher
 2. Lui donner l'id "titre" et le réafficher
 	- avec la méthode setAttribute()
@@ -62,11 +62,11 @@ EXERCICE 3 :
 - On peut utiliser la propriétéclassList pour ajouter ou supprimer des classes à un élément du DOM.
 - On emploie les méthodes add() (ajout) et remove() (suppression)
 - Une autre méthode très intéressante est la méthode toggle(), qui change la présence d'une classe dans la liste :
-	* si la classe existe, toggle() la supprime et retourne false, 
-	* si la classe n'existe pas, toggle() l'ajoute et retourne true. 
+	* si la classe existe, toggle() la supprime et retourne false,
+	* si la classe n'existe pas, toggle() l'ajoute et retourne true.
 */
 /*
-EXERCICE 4 : 
+EXERCICE 4 :
 - Accéder au premier titre h1 et le stocker dans la variable titreElt
 - Lui retirer la classe "debut"
 - Lui ajouter la classe "titre"
@@ -77,7 +77,7 @@ EXERCICE 4 :
 
 
 /*
-EXERCICE 5 : 
+EXERCICE 5 :
 - Accéder au premier li et le stocker dans la variable liElt
 - S'il possède la classe "hide", la retirer, sinon, l'ajouter
 - L'afficher
@@ -100,7 +100,7 @@ L'ajout d'un nouvel élément à une page web se décompose en trois opérations
 1°) Création du nouvel élément :
 	- on le crée avec la méthode createElement(), qui
 		* est une méthode de l'objet document
-		* prend en paramètre le nom de balise du nouvel élément 
+		* prend en paramètre le nom de balise du nouvel élément
 	- on le stocke dans une variable
 2°) Définition des informations de l'élément :
 	- on lui ajoute un contenu avec la propriété textContent
@@ -113,7 +113,7 @@ L'ajout d'un nouvel élément à une page web se décompose en trois opérations
 		voir les méthodes alternatives ci-après
 */
 /*
-EXERCICE 6 : 
+EXERCICE 6 :
 Ajouter le langage "ruby" à la liste des langages :
 - 1. Créer un élément li et le stocker dans une variable rubyElt
 - 2. Lui ajouter un id "python" et y inscrire le texte "Python"
@@ -121,6 +121,10 @@ Ajouter le langage "ruby" à la liste des langages :
 - 4. Afficher le contenu HTML de l'ul
 */
 
+const myLangages = document.querySelctor("#languages")
+const myNewLi = document.querySelctor (#php).cloneNode(true)
+myLangages.appendChild(myNewLi);
+myNewLi.textContent = "python"
 
 
 
@@ -136,7 +140,7 @@ Ajouter le langage "ruby" à la liste des langages :
 
 // 2.3. Choix de la position exacte du nouveau noeud
 /*
-On peut définir encore plus précisément la position des éléments insérés avec la méthode insertAdjacentHTML(), qui 
+On peut définir encore plus précisément la position des éléments insérés avec la méthode insertAdjacentHTML(), qui
 - est une méthode d'un élément existant
 - prend comme 1er paramètre une position :
 	* beforebegin : avant l'élément existant lui-même ;
@@ -146,7 +150,7 @@ On peut définir encore plus précisément la position des éléments insérés 
 - prend comme 2e paramètre une chaîne de caractères HTML qui représente le nouveau contenu à ajouter
 */
 /*
-EXERCICE 7 : 
+EXERCICE 7 :
 Ajouter le langage "JavaScript" au tout début de la liste des langages
 dans une li d'id "javascript" avec la méthode insertAdjacentHTML()
 puis afficher le contenu HTML de l'ul
@@ -187,7 +191,3 @@ EXERCICE 9 :
 - Supprimer l'élément correspondant au langage CSS que vous venez d'insérer
 - Réaffichez la liste des langages
 */
-
-
-
-
